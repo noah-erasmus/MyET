@@ -75,7 +75,10 @@
                 <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="Center">
-                    <Button Text="Feed"></Button>
+                    <Button 
+                        Text="Feed"
+                        Clicked="feedBtnClicked"
+                        x:Name="feedBtn"></Button>
                 </StackLayout>
             </StackLayout>
 
