@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyET.Food">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="Start">
+                <StackLayout
+                    HorizontalOptions="Start">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="Start">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button Text="Back" Clicked="BackBtnTapped"></Button>
+                </StackLayout>
+
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand">
+                    <Label 
+                        Text="FOOD"
+                        Margin="25"
+                        FontSize="30"
+                        HorizontalOptions="CenterAndExpand"></Label>
+                </StackLayout>
+
+                <StackLayout
+                    HorizontalOptions="End">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="End">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button Text="Button"></Button>
+                </StackLayout>
+                
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Vertical"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Button Text="Left"></Button>
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button Text="Right"></Button>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Button Text="Left"></Button>
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button Text="Right"></Button>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Button Text="Feed"></Button>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Vertical"
+                VerticalOptions="End">
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="End">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="Center">
+                        <Label Text="Red"></Label>
+                    </Frame>
+                    
+                </StackLayout>
+                <Frame
+                    WidthRequest="200"
+                    HeightRequest="200"
+                    CornerRadius="120"
+                    HorizontalOptions="Center">
+                    <Image Source="placeholder.png"></Image>
+                </Frame>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

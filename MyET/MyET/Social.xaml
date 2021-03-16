@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyET.Social">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="Start">
+                <StackLayout
+                    HorizontalOptions="Start">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="Start">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button Text="Back" Clicked="BackBtnTapped"></Button>
+                </StackLayout>
+
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand">
+                    <Label 
+                        Text="SOCIAL"
+                        Margin="25"
+                        FontSize="30"
+                        HorizontalOptions="CenterAndExpand"></Label>
+                </StackLayout>
+
+                <StackLayout
+                    HorizontalOptions="End">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="End">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button Text="Button"></Button>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout
+                VerticalOptions="CenterAndExpand">
+                <Frame
+                    WidthRequest="300"
+                    HeightRequest="300"
+                    CornerRadius="50"
+                    HorizontalOptions="Center">
+                    <Image Source="placeholder.png"></Image>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout
+                VerticalOptions="End">
+                <Button 
+                    Text="TRANSLATE" 
+                    HorizontalOptions="Center"
+                    WidthRequest="350"></Button>
+                <StackLayout
+                    Orientation="Horizontal">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="Start">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <StackLayout
+                        HorizontalOptions="CenterAndExpand"></StackLayout>
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="End">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

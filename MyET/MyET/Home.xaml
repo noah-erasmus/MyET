@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyET.Home">
+    <ContentPage.Content>
+        <StackLayout
+            HorizontalOptions="Center">
+
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="Start">
+                <StackLayout
+                    HorizontalOptions="Start">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="Start">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button Text="Back" Clicked="BackBtnTapped"></Button>
+                </StackLayout>
+
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand">
+                    <Label 
+                        Text="FOOD"
+                        Margin="25"
+                        FontSize="30"
+                        HorizontalOptions="CenterAndExpand"></Label>
+                </StackLayout>
+
+                <StackLayout
+                    HorizontalOptions="End">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="End">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button Text="Button"></Button>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout
+                VerticalOptions="CenterAndExpand">
+                <ProgressBar Progress="0.5"></ProgressBar>
+                <Frame
+                WidthRequest="300"
+                HeightRequest="300"
+                CornerRadius="200">
+                    <Image Source="placeholder.png"></Image>
+                </Frame>
+            </StackLayout>
+            
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="End">
+                <StackLayout
+                    Orientation="Vertical"
+                    HorizontalOptions="Start">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button
+                        Text="FOOD"
+                        Clicked="FoodMeterTapped"></Button>
+
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Vertical"
+                    HorizontalOptions="CenterAndExpand">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button
+                        Text="ABDUCTIONS"
+                        Clicked="AbductionsMeterTapped"></Button>
+
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Vertical"
+                    HorizontalOptions="End">
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        HorizontalOptions="CenterAndExpand">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button
+                        Text="SOCIAL"
+                        Clicked="SocialMeterTapped"></Button>
+
+                </StackLayout>
+
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

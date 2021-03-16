@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyET.NameAlien">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame
+                CornerRadius="150" 
+               HeightRequest="300"
+               WidthRequest="300"
+               HorizontalOptions="Center"
+               Padding="0"
+               IsClippedToBounds="True">
+                <Image
+                    Source="placeholder.png"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"></Image>
+            </Frame>
+            <Label 
+                Text="Name your alien buddy!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+                FontSize="30"/>
+            <Entry Text="" Placeholder="Prometheus"></Entry>
+            <Button
+                Text="Enter"
+                Clicked="NameAlienTapped"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
