@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyET.Food">
+             x:Class="MyET.Food"
+             BackgroundColor="#1c212f">
     <ContentPage.Content>
         <StackLayout
-            BackgroundColor="#2B3D4F">
+            Padding="20">
             
             <StackLayout
                 Orientation="Horizontal"
                 VerticalOptions="Start">
                 <StackLayout
                     HorizontalOptions="Start">
-                    <Frame
+                    <ImageButton 
+                        Source="back_arrow"
                         WidthRequest="50"
                         HeightRequest="50"
-                        CornerRadius="50"
-                        HorizontalOptions="Start">
-                        <Image Source="placeholder.png"></Image>
-                    </Frame>
-                    <Button Text="Back" Clicked="BackBtnTapped"></Button>
+                        BackgroundColor="Transparent"
+                        Clicked="BackBtnTapped"></ImageButton>
                 </StackLayout>
 
                 <StackLayout
                     HorizontalOptions="CenterAndExpand">
                     <Label 
                         Text="FOOD"
+                        TextColor="#41e47f"
                         Margin="25"
                         FontSize="30"
                         HorizontalOptions="CenterAndExpand"></Label>
@@ -32,14 +32,11 @@
 
                 <StackLayout
                     HorizontalOptions="End">
-                    <Frame
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        CornerRadius="50"
-                        HorizontalOptions="End">
-                        <Image Source="placeholder.png"></Image>
-                    </Frame>
-                    <Button Text="Button"></Button>
+                    <ImageButton 
+                            Source="menu_green"
+                            BackgroundColor="Transparent"
+                            WidthRequest="50"
+                            HeightRequest="50"></ImageButton>
                 </StackLayout>
                 
             </StackLayout>
@@ -50,58 +47,72 @@
                 <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="Center">
-                    <Button Text="Left"></Button>
+                    <Button 
+                        Text="Left"
+                        BackgroundColor="#41e47f"
+                        TextColor="White"></Button>
                     <Frame
                         WidthRequest="50"
                         HeightRequest="50"
                         CornerRadius="50">
                         <Image Source="placeholder.png"></Image>
                     </Frame>
-                    <Button Text="Right"></Button>
-                </StackLayout>
-
-                <StackLayout
-                    Orientation="Horizontal"
-                    HorizontalOptions="Center">
-                    <Button Text="Left"></Button>
-                    <Frame
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        CornerRadius="50">
-                        <Image Source="placeholder.png"></Image>
-                    </Frame>
-                    <Button Text="Right"></Button>
+                    <Button 
+                        Text="Right"
+                        BackgroundColor="#41e47f"
+                        TextColor="White"></Button>
                 </StackLayout>
 
                 <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="Center">
                     <Button 
-                        Text="Feed"></Button>
+                        Text="Left"
+                        BackgroundColor="#41e47f"
+                        TextColor="White"></Button>
+                    <Frame
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="50">
+                        <Image Source="placeholder.png"></Image>
+                    </Frame>
+                    <Button 
+                        Text="Right"
+                        BackgroundColor="#41e47f"
+                        TextColor="White"></Button>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Button 
+                        Text="Feed"
+                        x:Name="feedAlienBtn"
+                        Clicked="feedButton_Clicked"
+                        BackgroundColor="#41e47f"
+                        TextColor="White"></Button>
                 </StackLayout>
             </StackLayout>
 
             <StackLayout
                 Orientation="Vertical"
                 VerticalOptions="End">
-                <StackLayout
-                    Orientation="Horizontal"
-                    HorizontalOptions="End">
-                    <Frame
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        CornerRadius="50"
-                        HorizontalOptions="Center">
-                        <Label Text="Red"></Label>
-                    </Frame>
-                </StackLayout>
-                <Frame
+                <Image
+                    Source="thought_green"
+                    WidthRequest="80"
+                    Margin="200,0,0,0"></Image>
+                <Label
+                    Text="Content"
+                    x:Name="hungerStateLabel"
+                    FontSize="15"
+                    TextColor="#41e47f"
+                    HorizontalOptions="Center"></Label>
+                <Image
+                    Source="alien_green"
                     WidthRequest="200"
                     HeightRequest="200"
-                    CornerRadius="120"
-                    HorizontalOptions="Center">
-                    <Image Source="placeholder.png"></Image>
-                </Frame>
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center"></Image>
             </StackLayout>
             
         </StackLayout>

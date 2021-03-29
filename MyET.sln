@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyET.Android", "MyET\MyET.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyET.iOS", "MyET\MyET.iOS\MyET.iOS.csproj", "{E803F54D-DEFB-4B58-893E-DC9506EE9F7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyET", "MyET\MyET\MyET.csproj", "{D3133C82-40AF-4620-960F-87F71A581D1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyET", "MyET\MyET\MyET.csproj", "{D3133C82-40AF-4620-960F-87F71A581D1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E510EE24-8C7B-4E6D-AE0A-3F4812951BF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

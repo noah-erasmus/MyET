@@ -1,31 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyET.NameAlien">
+             x:Class="MyET.NameAlien"
+             BackgroundColor="#1c212f">
     <ContentPage.Content>
-        <StackLayout>
-            <Frame
-                CornerRadius="150" 
-               HeightRequest="300"
-               WidthRequest="300"
-               HorizontalOptions="Center"
-               Padding="0"
-               IsClippedToBounds="True">
-                <Image
-                    Source="placeholder.png"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"></Image>
-            </Frame>
+        <StackLayout
+            VerticalOptions="Center">
+            <Image
+                WidthRequest="200"
+                HeightRequest="200"
+                Source="alien_green"
+                Margin="0,0,0,70"></Image>
             <Label 
                 Text="Name your alien buddy!"
+                TextColor="White"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
                 FontAttributes="Bold"
-                FontSize="30"/>
-            <Entry Text="" Placeholder="Prometheus"></Entry>
+                FontSize="30"
+                Margin="0,0,0,70"/>
+            <Entry 
+                WidthRequest="300"
+                Text="" 
+                Placeholder="Prometheus" 
+                x:Name="AlienNameInput"
+                BackgroundColor="White"></Entry>
             <Button
+                WidthRequest="200"
                 Text="Enter"
-                Clicked="NameAlienTapped"></Button>
+                Clicked="NameAlienTapped"
+                BackgroundColor="#41e47f"
+                TextColor="White"
+                HorizontalOptions="Center"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

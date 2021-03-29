@@ -1,45 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyET.Home">
+             x:Class="MyET.Home"
+             BackgroundColor="#1c212f">
     <ContentPage.Content>
         <StackLayout
-            HorizontalOptions="Center">
+            HorizontalOptions="Center"
+            Padding="20">
 
             <StackLayout
                 Orientation="Horizontal"
                 VerticalOptions="Start">
                 <StackLayout
                     HorizontalOptions="Start">
-                    <Frame
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        Source="back_arrow"
+                        Clicked="BackBtnTapped"
                         WidthRequest="50"
-                        HeightRequest="50"
-                        CornerRadius="50"
-                        HorizontalOptions="Start">
-                        <Image Source="placeholder.png"></Image>
-                    </Frame>
-                    <Button Text="Back" Clicked="BackBtnTapped"></Button>
+                        HeightRequest="50"></ImageButton>
                 </StackLayout>
 
                 <StackLayout
                     HorizontalOptions="CenterAndExpand">
                     <Label 
-                        Text="FOOD"
-                        Margin="25"
+                        Text=""
+                        Margin="0,0,0,0"
                         FontSize="30"
-                        HorizontalOptions="CenterAndExpand"></Label>
+                        TextColor="White"
+                        HorizontalOptions="CenterAndExpand"
+                        x:Name="alienNameTitle"></Label>
                 </StackLayout>
 
                 <StackLayout
                     HorizontalOptions="End">
-                    <Frame
+                    <ImageButton 
+                        BackgroundColor="Transparent"
+                        Source="menu_green"
                         WidthRequest="50"
-                        HeightRequest="50"
-                        CornerRadius="50"
-                        HorizontalOptions="End">
-                        <Image Source="placeholder.png"></Image>
-                    </Frame>
-                    <Button Text="Button"></Button>
+                        HeightRequest="50"></ImageButton>
                 </StackLayout>
 
             </StackLayout>
@@ -47,12 +46,10 @@
             <StackLayout
                 VerticalOptions="CenterAndExpand">
                 <ProgressBar Progress="0.5"></ProgressBar>
-                <Frame
-                WidthRequest="300"
-                HeightRequest="300"
-                CornerRadius="200">
-                    <Image Source="placeholder.png"></Image>
-                </Frame>
+                <Image 
+                    Source="alien_green"
+                    WidthRequest="300"
+                    HeightRequest="300"></Image>
             </StackLayout>
             
             <StackLayout
@@ -61,49 +58,35 @@
                 <StackLayout
                     Orientation="Vertical"
                     HorizontalOptions="Start">
-                    <Frame
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        CornerRadius="50"
-                        HorizontalOptions="CenterAndExpand">
-                        <Image Source="placeholder.png"></Image>
-                    </Frame>
-                    <Button
-                        Text="FOOD"
-                        Clicked="FoodMeterTapped"></Button>
+                    <ImageButton 
+                            Source="food_green"
+                            BackgroundColor="Transparent"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            Clicked="FoodMeterTapped"></ImageButton>
 
                 </StackLayout>
 
                 <StackLayout
                     Orientation="Vertical"
                     HorizontalOptions="CenterAndExpand">
-                    <Frame
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        CornerRadius="50"
-                        HorizontalOptions="CenterAndExpand">
-                        <Image Source="placeholder.png"></Image>
-                    </Frame>
-                    <Button
-                        Text="ABDUCTIONS"
-                        Clicked="AbductionsMeterTapped"></Button>
-
+                    <ImageButton 
+                            Source="abductions_green"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            BackgroundColor="Transparent"
+                            Clicked="AbductionsMeterTapped"></ImageButton>
                 </StackLayout>
 
                 <StackLayout
                     Orientation="Vertical"
                     HorizontalOptions="End">
-                    <Frame
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        CornerRadius="50"
-                        HorizontalOptions="CenterAndExpand">
-                        <Image Source="placeholder.png"></Image>
-                    </Frame>
-                    <Button
-                        Text="SOCIAL"
-                        Clicked="SocialMeterTapped"></Button>
-
+                    <ImageButton 
+                            Source="social_green"
+                            Clicked="SocialMeterTapped"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            BackgroundColor="Transparent"></ImageButton>
                 </StackLayout>
 
 

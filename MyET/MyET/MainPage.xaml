@@ -1,14 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyET.MainPage">
+             x:Class="MyET.MainPage"
+             BackgroundColor="#1c212f">
 
-    <StackLayout>
+    <StackLayout
+        VerticalOptions="Center">
         <Label
-            Text="Welcome to MyET!"></Label>
-        <Button 
+            Text="Welcome to MyET!"
+            TextColor="White"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Margin="0,0,0,90"></Label>
+        <Image
+            Source="alien_green"
+            WidthRequest="100"
+            HeightRequest="100"
+            Margin="0,0,0,70"></Image>
+        <Label
+            Text="Let's start by naming your alien."
+            TextColor="White"
+            FontSize="15"
+            HorizontalOptions="Center"
+            Margin="0,0,0,10"></Label>
+        <Button
+            WidthRequest="200"
             Text="Name alien"
-            Clicked="NameAlienTapped"></Button>
+            Clicked="NameAlienTapped"
+            BackgroundColor="#41e47f"
+            TextColor="White"
+            HorizontalOptions="Center"></Button>
     </StackLayout>
 
 </ContentPage>
