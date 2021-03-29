@@ -10,6 +10,34 @@ namespace MyET.Objects
         const string alienXpKey = "alienXp";
         const string alienNameKey = "alienName";
 
+        const string HungerStateKey = "hungerState";
+        const string HungerKey = "hunger";
+
+        const string SocialStateKey = "socialState";
+        const string SocialKey = "social";
+
+        const string AbductionStateKey = "abductionState";
+        const string AbductionKey = "abduction";
+        public HungerState CurrentHungerState
+        {
+            get
+            {
+                if (App.Current.Properties.ContainsKey(HungerStateKey))
+                {
+                    return HungerStates.GetHungerState((string)App.Current.Properties[HungerStateKey]);
+                }
+                else
+                {
+                    return HungerState.content;
+                }
+            }
+
+            set
+            {
+                App.Current.Properties[HungerKey] = HungerStates.GetHungerString(value);
+            }
+        }
+
         public AlienState CurrentAlienState
         {
             get
@@ -77,10 +105,109 @@ namespace MyET.Objects
 
         }
 
-        public void giveFood()
+        public int Hunger
         {
-            CurrentAlienState = AlienState.happy;
-            Xp = Xp + 500;
+            get
+            {
+                if (App.Current.Properties.ContainsKey(HungerKey))
+                {
+                    return (int)App.Current.Properties[HungerKey];
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            set
+            {
+                App.Current.Properties[HungerKey] = value;
+            }
+        }
+
+        public int Social
+        {
+            get
+            {
+                if (App.Current.Properties.ContainsKey(SocialKey))
+                {
+                    return (int)App.Current.Properties[SocialKey];
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            set
+            {
+                App.Current.Properties[SocialKey] = value;
+            }
+        }
+
+        public int Abduction
+        {
+            get
+            {
+                if (App.Current.Properties.ContainsKey(AbductionKey))
+                {
+                    return (int)App.Current.Properties[AbductionKey];
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            set
+            {
+                App.Current.Properties[AbductionKey] = value;
+            }
+        }
+
+        public void Feed()
+        {
+            if (Hunger < 91)
+            {
+                Hunger += 10;
+            }
+            else
+            {
+                Hunger = 100;
+            }
+        }
+
+        public void Starve()
+        {
+            if(Hunger > 0)
+            {
+                Hunger -= 2;
+            }
+            else
+            {
+                Hunger = 0;
+            }
+        }
+
+        public void Isolate()
+        {
+            if (Social > 0)
+            {
+                Social -= 2;
+            }
+            else
+            {
+                Social = 0;
+            }
+        }
+
+        public void Escape()
+        {
+            if (Abduction > 0)
+            {
+                Abduction -= 2;
+            }
+            else
+            {
+                Abduction = 0;
+            }
         }
     }
 }

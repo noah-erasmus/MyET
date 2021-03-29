@@ -3,10 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyET.Abductions">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+                Orientation="Vertical"
+                VerticalOptions="End">
+            <Image
+                    Source="thought_green"
+                    WidthRequest="80"
+                    Margin="200,0,0,0"></Image>
+            <Label
+                    Text="Content"
+                    x:Name="abductionStateLabel"
+                    FontSize="15"
+                    TextColor="#41e47f"
+                    HorizontalOptions="Center"></Label>
+            <ProgressBar
+                    Progress="0"
+                    x:Name="abductionBar"></ProgressBar>
+            <Image
+                    Source="alien_green"
+                    WidthRequest="200"
+                    HeightRequest="200"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center"></Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

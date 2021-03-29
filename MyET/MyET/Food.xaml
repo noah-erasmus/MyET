@@ -107,6 +107,9 @@
                     FontSize="15"
                     TextColor="#41e47f"
                     HorizontalOptions="Center"></Label>
+                <ProgressBar
+                    Progress="0"
+                    x:Name="hungerBar"></ProgressBar>
                 <Image
                     Source="alien_green"
                     WidthRequest="200"
