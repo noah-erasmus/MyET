@@ -161,6 +161,7 @@ namespace MyET
             ChatAlien(sender, e);
             UpdateUI();
         }
+
         private void abductGesture(object sender, EventArgs e)
         {
             AbductAlien(sender, e);
@@ -189,23 +190,26 @@ namespace MyET
 
             if(totalPoints < 100)
             {
-                if(alienHead.Source != ImageSource.FromFile("alien_sad.png"))
+                var mood = "sad";
+                if(alienHead.Source != ImageSource.FromFile("alien_"+mood+".png"))
                 {
-                    alienHead.Source = ImageSource.FromFile("alien_sad.png");
+                    alienHead.Source = ImageSource.FromFile("alien_" + mood + ".png");
                 }
             }
             else if(totalPoints < 200)
             {
-                if (alienHead.Source != ImageSource.FromFile("alien_neutral.png"))
+                var mood = "neutral";
+                if (alienHead.Source != ImageSource.FromFile("alien_"+mood+".png"))
                 {
                     alienHead.Source = ImageSource.FromFile("alien_neutral.png");
                 }
             }
             else if (totalPoints < 300)
             {
-                if (alienHead.Source != ImageSource.FromFile("alien_happy.png"))
+                var mood = "happy";
+                if (alienHead.Source != ImageSource.FromFile("alien_"+mood+".png"))
                 {
-                    alienHead.Source = ImageSource.FromFile("alien_happy.png");
+                    alienHead.Source = ImageSource.FromFile("alien_"+mood+".png");
                 }
             }
             else

@@ -9,7 +9,7 @@
             <Image
                 WidthRequest="200"
                 HeightRequest="200"
-                Source="alien_green"
+                Source="alien_happy"
                 Margin="0,0,0,70"></Image>
             <Label 
                 Text="Name your alien buddy!"
@@ -24,7 +24,10 @@
                 Text="" 
                 Placeholder="Prometheus" 
                 x:Name="AlienNameInput"
-                BackgroundColor="White"></Entry>
+                TextColor="White"
+                PlaceholderColor="Gray"
+                BackgroundColor="#1c212f"
+                ></Entry>
             <Button
                 WidthRequest="200"
                 Text="Enter"

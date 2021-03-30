@@ -18,6 +18,10 @@ namespace MyET.Objects
 
         const string AbductionStateKey = "abductionState";
         const string AbductionKey = "abduction";
+
+        const string ColourStateKey = "colourState";
+        const string ColourKey = "colour";
+
         public HungerState CurrentHungerState
         {
             get
@@ -97,6 +101,26 @@ namespace MyET.Objects
             set
             {
                 App.Current.Properties[alienNameKey] = value;
+            }
+        }
+
+        public string AlienColour
+        {
+            get
+            {
+                if (App.Current.Properties.ContainsKey(ColourStateKey))
+                {
+                    return (string)App.Current.Properties[ColourStateKey];
+                }
+                else
+                {
+                    return "green";
+                }
+
+            }
+            set
+            {
+                App.Current.Properties[ColourStateKey] = value;
             }
         }
 
