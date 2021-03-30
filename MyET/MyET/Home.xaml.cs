@@ -104,6 +104,11 @@ namespace MyET
             UpdateUI();
         }
 
+        async void editBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Edit());
+        }
+
         private void socialButton_Clicked(object sender, EventArgs e)
         {
             ChatAlien(sender, e);
@@ -190,31 +195,34 @@ namespace MyET
 
             if(totalPoints < 100)
             {
+                var colour = alien.AlienColour;
                 var mood = "sad";
-                if(alienHead.Source != ImageSource.FromFile("alien_"+mood+".png"))
+                if(alienHead.Source != ImageSource.FromFile("alien_"+mood+"_"+colour+".png"))
                 {
-                    alienHead.Source = ImageSource.FromFile("alien_" + mood + ".png");
+                    alienHead.Source = ImageSource.FromFile("alien_" + mood + "_" + colour + ".png");
                 }
             }
             else if(totalPoints < 200)
             {
+                var colour = alien.AlienColour;
                 var mood = "neutral";
-                if (alienHead.Source != ImageSource.FromFile("alien_"+mood+".png"))
+                if (alienHead.Source != ImageSource.FromFile("alien_" + mood + "_" + colour + ".png"))
                 {
-                    alienHead.Source = ImageSource.FromFile("alien_neutral.png");
+                    alienHead.Source = ImageSource.FromFile("alien_" + mood + "_" + colour + ".png");
                 }
             }
             else if (totalPoints < 300)
             {
+                var colour = alien.AlienColour;
                 var mood = "happy";
-                if (alienHead.Source != ImageSource.FromFile("alien_"+mood+".png"))
+                if (alienHead.Source != ImageSource.FromFile("alien_" + mood + "_" + colour + ".png"))
                 {
-                    alienHead.Source = ImageSource.FromFile("alien_"+mood+".png");
+                    alienHead.Source = ImageSource.FromFile("alien_" + mood + "_" + colour + ".png");
                 }
             }
             else
             {
-                alienHead.Source = ImageSource.FromFile("alien_happy.png");
+                alienHead.Source = ImageSource.FromFile("alien_happy_green.png");
             }
 
             if (earth.Source != ImageSource.FromFile("earth.png"))

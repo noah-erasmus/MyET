@@ -9,7 +9,7 @@
             <Image
                 WidthRequest="200"
                 HeightRequest="200"
-                Source="alien_happy"
+                Source="alien_happy_green"
                 Margin="0,0,0,70"></Image>
             <Label 
                 Text="Name your alien buddy!"

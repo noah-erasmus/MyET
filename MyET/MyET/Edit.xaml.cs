@@ -20,7 +20,12 @@ namespace MyET
             InitializeComponent();
         }
 
-        async void setColourGreen()
+        async void BackBtnTapped(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+
+        async void setColourGreen(System.Object sender, System.EventArgs e)
         {
             if(alien.AlienColour != "green")
             {
@@ -29,7 +34,7 @@ namespace MyET
             }
         }
 
-        async void setColourRed()
+        async void setColourRed(System.Object sender, System.EventArgs e)
         {
             if (alien.AlienColour != "red")
             {
@@ -38,7 +43,7 @@ namespace MyET
             }
         }
 
-        async void setColourBlue()
+        async void setColourBlue(System.Object sender, System.EventArgs e)
         {
             if (alien.AlienColour != "blue")
             {

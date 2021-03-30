@@ -49,7 +49,7 @@
                     <Image
                         HorizontalOptions="Start"
                         VerticalOptions="StartAndExpand"
-                        Source="alien_neutral"
+                        Source="alien_neutral_green"
                         WidthRequest="150"
                         HeightRequest="150"></Image>
 

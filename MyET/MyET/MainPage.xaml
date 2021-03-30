@@ -13,9 +13,9 @@
             HorizontalOptions="Center"
             Margin="0,0,0,90"></Label>
         <Image
-            Source="alien_happy"
-            WidthRequest="100"
-            HeightRequest="100"
+            Source="alien_happy_green"
+            WidthRequest="200"
+            HeightRequest="200"
             Margin="0,0,0,70"></Image>
         <Label
             Text="Let's start by naming your alien."

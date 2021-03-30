@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyET.Edit">
+             x:Class="MyET.Edit"
+             BackgroundImageSource="bg">
     <ContentPage.Content>
         <StackLayout
             Padding="40">
@@ -24,7 +25,7 @@
                     VerticalOptions="Center"
                     HorizontalOptions="CenterAndExpand">
                     <Label
-                        Text="EDIT ET"
+                        Text="EDIT ALIEN"
                         FontSize="20"
                         TextColor="#41e47f"></Label>
                 </StackLayout>
@@ -40,10 +41,13 @@
             <StackLayout
                 Orientation="Vertical">
                 <Label
+                    HorizontalOptions="Center"
                     Text="Choose your ET's colour:"
                     TextColor="White"
                     FontSize="20"></Label>
                 <BoxView
+                    CornerRadius="10"
+                    Margin="0,30,0,0"
                     WidthRequest="200"
                     HeightRequest="100"
                     Color="#bee3ae">
@@ -53,6 +57,8 @@
                     </BoxView.GestureRecognizers>
                 </BoxView>
                 <BoxView
+                    CornerRadius="10"
+                    Margin="0,30,0,0"
                     WidthRequest="200"
                     HeightRequest="100"
                     Color="#e55c5c">
@@ -62,6 +68,8 @@
                     </BoxView.GestureRecognizers>
                 </BoxView>
                 <BoxView
+                    CornerRadius="10"
+                    Margin="0,30,0,0"
                     WidthRequest="200"
                     HeightRequest="100"
                     Color="#5d7de2">
