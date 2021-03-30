@@ -162,6 +162,13 @@ namespace MyET.Objects
             }
         }
 
+        public void Birth()
+        {
+            Hunger = 50;
+            Social = 50;
+            Abduction = 50;
+        }
+
         public void Feed()
         {
             if (Hunger < 91)
@@ -190,7 +197,7 @@ namespace MyET.Objects
         {
             if (Abduction < 91)
             {
-                Social += 10;
+                Abduction += 10;
             }
             else
             {

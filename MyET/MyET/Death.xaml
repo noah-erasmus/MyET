@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyET.Death"
+             BackgroundImageSource="bg">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Label Text="Oh no! Your ET has died!"
+                       HorizontalOptions="Center"
+                       TextColor="#41e47f"
+                       FontSize="25"
+                       FontAttributes="Bold"/>
+                <Image 
+                    Source="rip"
+                    WidthRequest="300"
+                    HeightRequest="300"></Image>
+                <Label Text="Flip the switch below to clone a new one."
+                       HorizontalOptions="Center"
+                       TextColor="#41e47f"
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       WidthRequest="250"/>
+                <Switch
+                    x:Name="reviveSwitch"
+                    HorizontalOptions="Center"
+                    Toggled="reviveSwitch_Toggled"
+                    Scale="2"
+                    ThumbColor="#41e47f"></Switch>
+            </StackLayout>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

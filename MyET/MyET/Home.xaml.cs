@@ -20,15 +20,12 @@ namespace MyET
         public Home()
         {
             InitializeComponent();
+            NewAlien();
             UpdateUI();
             StartTimer();
         }
 
-        //async void FoodMeterTapped(System.Object sender, System.EventArgs e)
-        //{
-        //    await Navigation.PushModalAsync(new Food());
-        //}
-
+        //TimeKeeper
         private void StartTimer()
         {
             isTimed = true;
@@ -70,38 +67,46 @@ namespace MyET
             });
         }
 
-        async void AbductionsMeterTapped(System.Object sender, System.EventArgs e)
+        private void NewAlien()
         {
-            await Navigation.PushModalAsync(new Abductions());
+            alien.Birth();
         }
 
-        async void SocialMeterTapped(System.Object sender, System.EventArgs e)
-        {
-            await Navigation.PushModalAsync(new Social());
-        }
+        //async void FoodMeterTapped(System.Object sender, System.EventArgs e)
+        //{
+        //    await Navigation.PushModalAsync(new Food());
+        //}
+
+        //async void AbductionsMeterTapped(System.Object sender, System.EventArgs e)
+        //{
+        //    await Navigation.PushModalAsync(new Abductions());
+        //}
+
+        //async void SocialMeterTapped(System.Object sender, System.EventArgs e)
+        //{
+        //    await Navigation.PushModalAsync(new Social());
+        //}
 
         async void BackBtnTapped(System.Object sender, System.EventArgs e)
         {
             await Navigation.PopModalAsync();
         }
 
+        //Attention Controls
         private void feedButton_Clicked(object sender, EventArgs e)
         {
-            //alien.Feed();
             FeedAlien(sender, e);
             UpdateUI();
         }
 
         private void socialButton_Clicked(object sender, EventArgs e)
         {
-            //alien.Chat();
             ChatAlien(sender, e);
             UpdateUI();
         }
 
         private void abductButton_Clicked(object sender, EventArgs e)
         {
-            //alien.Chat();
             AbductAlien(sender, e);
             UpdateUI();
         }
@@ -124,18 +129,7 @@ namespace MyET
             UpdateUI();
         }
 
-        void UpdateUI()
-        {
-            if(alienNameTitle.Text != alien.AlienName)
-            {
-                alienNameTitle.Text = alien.AlienName;
-            }
-
-            hungerGauge(Convert.ToDouble(alien.Hunger) / 100);
-            socialGauge(Convert.ToDouble(alien.Social) / 100);
-            abductionGauge(Convert.ToDouble(alien.Abduction) / 100);
-        }
-
+        //Status Gauges
         async private void hungerGauge(double i)
         {
             await hungerBar.ProgressTo(i, 100, Easing.Linear);
@@ -150,5 +144,82 @@ namespace MyET
         {
             await abductionBar.ProgressTo(i, 100, Easing.Linear);
         }
+
+        private void feedGesture(object sender, EventArgs e)
+        {
+            FeedAlien(sender, e);
+            UpdateUI();
+        }
+
+        private void socialGesture(object sender, EventArgs e)
+        {
+            ChatAlien(sender, e);
+            UpdateUI();
+        }
+        private void abductGesture(object sender, EventArgs e)
+        {
+            AbductAlien(sender, e);
+            UpdateUI();
+        }
+
+        async void Die()
+        {
+            alien.Hunger = 50;
+            await Navigation.PushModalAsync(new Death());
+        }
+
+        //UpdateUI
+        void UpdateUI()
+        {
+            if(alienNameTitle.Text != alien.AlienName)
+            {
+                alienNameTitle.Text = alien.AlienName;
+            }
+
+            hungerGauge(Convert.ToDouble(alien.Hunger) / 100);
+            socialGauge(Convert.ToDouble(alien.Social) / 100);
+            abductionGauge(Convert.ToDouble(alien.Abduction) / 100);
+
+            var totalPoints = alien.Hunger + alien.Social + alien.Abduction;
+
+            if(totalPoints < 100)
+            {
+                if(alienHead.Source != ImageSource.FromFile("alien_sad.png"))
+                {
+                    alienHead.Source = ImageSource.FromFile("alien_sad.png");
+                }
+            }
+            else if(totalPoints < 200)
+            {
+                if (alienHead.Source != ImageSource.FromFile("alien_neutral.png"))
+                {
+                    alienHead.Source = ImageSource.FromFile("alien_neutral.png");
+                }
+            }
+            else if (totalPoints < 300)
+            {
+                if (alienHead.Source != ImageSource.FromFile("alien_happy.png"))
+                {
+                    alienHead.Source = ImageSource.FromFile("alien_happy.png");
+                }
+            }
+            else
+            {
+                alienHead.Source = ImageSource.FromFile("alien_happy.png");
+            }
+
+            if (earth.Source != ImageSource.FromFile("earth.png"))
+            {
+                earth.Source = ImageSource.FromFile("earth.png");
+            }
+
+            if(alien.Hunger == 0)
+            {
+                Die();
+            }
+
+        }
+
+        
     }
 }
