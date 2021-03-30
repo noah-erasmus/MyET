@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyET.Help"
+             BackgroundImageSource="bg">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="20">
+
+            <StackLayout
+                Orientation="Vertical"
+                VerticalOptions="Center">
+                <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="Start">
+                    <StackLayout
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center">
+                        <ImageButton
+                        BackgroundColor="Transparent"
+                        Source="back_arrow"
+                        Clicked="BackBtnTapped"
+                        WidthRequest="40"
+                        HeightRequest="40"></ImageButton>
+                    </StackLayout>
+
+                    <StackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand">
+                        <Label
+                        Text="HELP"
+                        FontSize="20"
+                        TextColor="#41e47f"></Label>
+                    </StackLayout>
+
+                    <StackLayout
+                    HorizontalOptions="End"
+                    WidthRequest="40">
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal">
+
+                    <StackLayout
+                    Orientation="Vertical"
+                    HeightRequest="200">
+
+                        <Image
+                        HorizontalOptions="Start"
+                        VerticalOptions="StartAndExpand"
+                        Source="alien_neutral"
+                        WidthRequest="150"
+                        HeightRequest="150"></Image>
+
+                        <StackLayout
+                        Orientation="Horizontal"
+                        VerticalOptions="End">
+                            <Image
+                            Source="ufo"
+                            WidthRequest="50"
+                            HeightRequest="50"></Image>
+                            <StackLayout
+                            HorizontalOptions="CenterAndExpand"></StackLayout>
+                            <Image
+                            HorizontalOptions="End"
+                            Source="earth"
+                            WidthRequest="40"
+                            HeightRequest="40"></Image>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout
+                    Orientation="Vertical"
+                    HorizontalOptions="Center"
+                    HeightRequest="250"
+                    WidthRequest="100">
+                        <Image
+                        Source="double_tap"
+                        WidthRequest="50"
+                        HeightRequest="50"></Image>
+                        <Image
+                        VerticalOptions="CenterAndExpand"
+                        Source="swipe_up"
+                        WidthRequest="50"
+                        HeightRequest="50"></Image>
+                        <Image
+                        VerticalOptions="End"
+                        Source="drag_right"
+                        WidthRequest="50"
+                        HeightRequest="50"></Image>
+                    </StackLayout>
+
+                    <StackLayout
+                    Orientation="Vertical">
+                        <Label
+                        Text="Double-tap ET to feed him."
+                        TextColor="White"
+                        FontSize="15"></Label>
+                        <Label
+                        VerticalOptions="CenterAndExpand"
+                        Text="Swipe on ET to communicate."
+                        TextColor="White"
+                        FontSize="15"></Label>
+                        <Label
+                        VerticalOptions="End"
+                        Text="Drag ET's UFO to Earth for abducions."
+                        TextColor="White"
+                        FontSize="15"></Label>
+                    </StackLayout>
+
+                </StackLayout>
+
+            </StackLayout>
+            
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

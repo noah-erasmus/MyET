@@ -92,6 +92,11 @@ namespace MyET
             await Navigation.PopModalAsync();
         }
 
+        async void HelpBtnTapped(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Help());
+        }
+
         //Attention Controls
         private void feedButton_Clicked(object sender, EventArgs e)
         {

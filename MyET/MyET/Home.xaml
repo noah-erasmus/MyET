@@ -38,7 +38,8 @@
                         BackgroundColor="Transparent"
                         Source="help"
                         WidthRequest="40"
-                        HeightRequest="40"></ImageButton>
+                        HeightRequest="40"
+                        Clicked="HelpBtnTapped"></ImageButton>
                 </StackLayout>
 
             </StackLayout>
