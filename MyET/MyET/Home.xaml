@@ -45,14 +45,68 @@
 
             <StackLayout
                 VerticalOptions="CenterAndExpand">
-                <ProgressBar Progress="0.5"></ProgressBar>
-                <Image 
-                    Source="alien_green"
-                    WidthRequest="300"
-                    HeightRequest="300"></Image>
+                <StackLayout>
+                    <Label
+                        Text="Hunger"
+                        FontSize="20"
+                        TextColor="White">
+                    </Label>
+                    <ProgressBar
+                        Progress="0"
+                        x:Name="hungerBar">
+                    </ProgressBar>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label
+                        Text="Social"
+                        FontSize="20"
+                        TextColor="White">
+                    </Label>
+                    <ProgressBar
+                        Progress="0"
+                        x:Name="socialBar">
+                    </ProgressBar>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label
+                        Text="Abductions"
+                        FontSize="20"
+                        TextColor="White">
+                    </Label>
+                    <ProgressBar
+                        Progress="0"
+                        x:Name="abductionBar">
+                    </ProgressBar>
+                </StackLayout>
+
             </StackLayout>
             
+            <Image 
+                Source="alien_green"
+                WidthRequest="300"
+                HeightRequest="300"></Image>
+
             <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="End">
+
+                <Button
+                    Clicked="feedButton_Clicked"
+                    Text="Feed"></Button>
+
+                <Button
+                    Clicked="socialButton_Clicked"
+                    Text="Chat"></Button>
+
+                <Button
+                    Clicked="abductButton_Clicked"
+                    Text="Abduct"></Button>
+                
+            </StackLayout>
+            
+            <!--<StackLayout
                 Orientation="Horizontal"
                 VerticalOptions="End">
                 <StackLayout
@@ -91,7 +145,7 @@
 
 
 
-            </StackLayout>
+            </StackLayout>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

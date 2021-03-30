@@ -174,6 +174,30 @@ namespace MyET.Objects
             }
         }
 
+        public void Chat()
+        {
+            if (Social < 91)
+            {
+                Social += 10;
+            }
+            else
+            {
+                Social = 100;
+            }
+        }
+
+        public void Abduct()
+        {
+            if (Abduction < 91)
+            {
+                Social += 10;
+            }
+            else
+            {
+                Abduction = 100;
+            }
+        }
+
         public void Starve()
         {
             if(Hunger > 0)

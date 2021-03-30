@@ -35,13 +35,18 @@ namespace MyET
 
         void UpdateUI()
         {
-            var hungerState = HungerStates.GetHungerString(HungerStates.GetStateFromHunger(alien.Hunger));
-            if (hungerStateLabel.Text != hungerState)
+            var abductionState = AbductionStates.GetAbductionString(AbductionStates.GetStateFromAbduction(alien.Abduction));
+            if (abductionStateLabel.Text != abductionState)
             {
-                hungerStateLabel.Text = hungerState;
+                abductionStateLabel.Text = abductionState;
             }
 
-            hungerGauge(Convert.ToDouble(alien.Hunger) / 100);
+            abductionGauge(Convert.ToDouble(alien.Abduction) / 100);
+        }
+
+        async private void abductionGauge(double i)
+        {
+            await abductionBar.ProgressTo(i, 100, Easing.Linear);
         }
 
         private void StartTimer()
